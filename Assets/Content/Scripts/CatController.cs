@@ -9,6 +9,8 @@ public class CatController : MonoBehaviour
     public float rotationSpeed = 100f; // Rotation speed of the player
     public float jumpForce = 10f; // Force applied when jumping
 
+    Animator anim;
+
     private Rigidbody rb;
     private bool isGrounded; // Flag to track if the player is grounded
 
@@ -17,6 +19,7 @@ public class CatController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component attached to the player
         Physics.gravity = new Vector3(0, -100, 0);
+        
          
         
     }
@@ -50,6 +53,11 @@ public class CatController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false; // Player is no longer grounded after jumping
+        }
+
+        if(walkSpeed > 0f)
+        {
+
         }
 
     }
