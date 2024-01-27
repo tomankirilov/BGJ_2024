@@ -21,7 +21,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftLowerLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -29,7 +30,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -87,7 +88,92 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Armature_Cat(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cat
+      parentName: Armature_Cat(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature_Cat
+      parentName: Armature_Cat(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root
+      parentName: Armature_Cat
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.000000021855694, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SpineFront
+      parentName: Root
+      position: {x: -0, y: 0.11000001, z: -0.20000002}
+      rotation: {x: 0.5750936, y: -0.00000009752364, z: -0.0000000685565, w: 0.8180876}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Head
+      parentName: SpineFront
+      position: {x: -7.191746e-16, y: 0.14878517, z: -0.000000007450581}
+      rotation: {x: -0.46122864, y: -7.105428e-15, z: 0.000000109965484, w: 0.88728136}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: Ear.L
+      parentName: Head
+      position: {x: -0.072270915, y: 0.17741, z: -0.058832213}
+      rotation: {x: -0.027648002, y: -0.72047997, z: 0.004916668, w: 0.69290704}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
+    - name: Ear.R
+      parentName: Head
+      position: {x: 0.072270885, y: 0.17741, z: -0.058832247}
+      rotation: {x: -0.027648002, y: 0.7204801, z: -0.004916638, w: 0.69290686}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Medalion
+      parentName: SpineFront
+      position: {x: 0.000000017710384, y: 0.22011733, z: 0.07428273}
+      rotation: {x: 0.74569046, y: -2.3980817e-14, z: -0.00000017778649, w: 0.66629255}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: SpineBack
+      parentName: Root
+      position: {x: -0, y: 0.020000035, z: -0.2}
+      rotation: {x: -0.23355412, y: -9.673489e-25, z: 1.6841904e-24, w: 0.97234386}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Tail_Base
+      parentName: SpineBack
+      position: {x: 8.271806e-25, y: 0.13892445, z: -0.000000007450581}
+      rotation: {x: 0.24145322, y: -0.000000115682234, z: -0.000000028783463, w: 0.9704125}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Tail_Mid
+      parentName: Tail_Base
+      position: {x: -8.163539e-15, y: 0.11766055, z: 0.000000014901161}
+      rotation: {x: 0.12566817, y: 1.4210855e-14, z: -0.000000029961654, w: 0.99207234}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: Tail_Tip
+      parentName: Tail_Mid
+      position: {x: 7.279773e-15, y: 0.14668162, z: 0}
+      rotation: {x: 0.11021391, y: 0.000000118483, z: -0.000000013138525, w: 0.99390787}
+      scale: {x: 1, y: 0.99999994, z: 0.9999998}
+    - name: Leg_Front.L
+      parentName: Root
+      position: {x: -0.0779225, y: 0.058238074, z: -0.017296454}
+      rotation: {x: 0.999009, y: 0.0368469, z: 0.00090576266, w: -0.024950817}
+      scale: {x: 1.0000095, y: 1.0000057, z: 1.0000002}
+    - name: Leg_Back.L
+      parentName: Root
+      position: {x: -0.07791791, y: -0.06176166, z: -0.11929636}
+      rotation: {x: 0.996833, y: 0.03644537, z: 0.002575786, w: -0.07063307}
+      scale: {x: 1.0000012, y: 1.0000055, z: 1.0000006}
+    - name: Leg_Front.R
+      parentName: Root
+      position: {x: 0.0779225, y: 0.058238074, z: -0.017296454}
+      rotation: {x: 0.999009, y: -0.0368469, z: -0.00090576266, w: -0.024950817}
+      scale: {x: 1.0000095, y: 1.0000057, z: 1.0000002}
+    - name: Leg_Back.R
+      parentName: Root
+      position: {x: 0.07791791, y: -0.06176166, z: -0.11929636}
+      rotation: {x: 0.996833, y: -0.03644537, z: -0.002575786, w: -0.07063307}
+      scale: {x: 1.0000012, y: 1.0000057, z: 1.000001}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -98,13 +184,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
