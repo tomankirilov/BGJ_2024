@@ -2689,7 +2689,7 @@ GameObject:
   - component: {fileID: 1437678358}
   m_Layer: 0
   m_Name: walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2783,7 +2783,7 @@ MonoBehaviour:
   walkSpeed: 15
   runSpeed: 25
   rotationSpeed: 700
-  jumpForce: 10
+  jumpForce: 40
 --- !u!54 &1446768647
 Rigidbody:
   m_ObjectHideFlags: 0
