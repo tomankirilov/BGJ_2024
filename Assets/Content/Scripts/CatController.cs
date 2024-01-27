@@ -12,10 +12,13 @@ public class CatController : MonoBehaviour
     private Rigidbody rb;
     private bool isGrounded; // Flag to track if the player is grounded
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component attached to the player
         Physics.gravity = new Vector3(0, -100, 0);
+         
+        
     }
 
     void Update()
@@ -48,6 +51,7 @@ public class CatController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false; // Player is no longer grounded after jumping
         }
+
     }
 
     // Check if the player is grounded
@@ -60,4 +64,5 @@ public class CatController : MonoBehaviour
     {
         isGrounded = false;
     }
+
 }
