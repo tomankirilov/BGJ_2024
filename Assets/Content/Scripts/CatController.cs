@@ -15,6 +15,7 @@ public class CatController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component attached to the player
+        Physics.gravity = new Vector3(0, -100, 0);
     }
 
     void Update()
