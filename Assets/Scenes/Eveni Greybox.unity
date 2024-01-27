@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 56240655}
   - component: {fileID: 56240654}
   - component: {fileID: 56240653}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 132187411}
   - component: {fileID: 132187410}
   - component: {fileID: 132187409}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 203202070}
   - component: {fileID: 203202069}
   - component: {fileID: 203202068}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 213951950}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 243676919}
   - component: {fileID: 243676918}
   - component: {fileID: 243676917}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -748,7 +748,7 @@ GameObject:
   - component: {fileID: 266870873}
   - component: {fileID: 266870872}
   - component: {fileID: 266870871}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 555381055}
   - component: {fileID: 555381054}
   - component: {fileID: 555381053}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1590,7 +1590,7 @@ GameObject:
   - component: {fileID: 676687838}
   - component: {fileID: 676687837}
   - component: {fileID: 676687836}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1798,7 +1798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 856821965}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor living room/bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2342,7 +2342,7 @@ GameObject:
   - component: {fileID: 1237675758}
   - component: {fileID: 1237675757}
   - component: {fileID: 1237675756}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3048,7 +3048,7 @@ GameObject:
   - component: {fileID: 1610273611}
   - component: {fileID: 1610273610}
   - component: {fileID: 1610273609}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3154,7 +3154,7 @@ GameObject:
   - component: {fileID: 1636477682}
   - component: {fileID: 1636477681}
   - component: {fileID: 1636477680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3950,7 +3950,7 @@ GameObject:
   - component: {fileID: 1960869978}
   - component: {fileID: 1960869977}
   - component: {fileID: 1960869976}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4056,7 +4056,7 @@ GameObject:
   - component: {fileID: 2085774903}
   - component: {fileID: 2085774902}
   - component: {fileID: 2085774901}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4162,7 +4162,7 @@ GameObject:
   - component: {fileID: 2097743210}
   - component: {fileID: 2097743209}
   - component: {fileID: 2097743208}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
