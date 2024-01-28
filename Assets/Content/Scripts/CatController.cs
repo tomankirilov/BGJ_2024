@@ -59,16 +59,29 @@ public class CatController : MonoBehaviour
         // Calculate movement direction
         Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical).normalized;
 
-        if (movement.magnitude > 0 && isGrounded)
-    {
-        // Trigger animation here
-        anim.SetBool("Walk", true);
-    }
-    else if(movement.magnitude == 0 && isGrounded)
-    {
-        // Set animation parameter to false if there is no movement
-        anim.SetBool("Walk", false);
-    }
+
+        if (isGrounded)
+        {
+            // anim.Play("Idle");
+            if (movement.magnitude > 0)
+            {
+                // Trigger animation here
+                anim.SetBool("Walk", true);
+            }
+            else
+            {
+                // Set animation parameter to false if there is no movement
+                anim.SetBool("Walk", false);
+            }    
+        }
+        else
+        {
+            // anim.Play("Jump_Down");
+        }
+
+
+
+
         // Rotate the player based on movement direction
         if (movement != Vector3.zero)
         {
@@ -81,8 +94,6 @@ public class CatController : MonoBehaviour
 
         // Move the player
         rb.velocity = new Vector3(movement.x * speed, rb.velocity.y, movement.z * speed);
-
-        Debug.Log("Working");
     }
 
     private void jump()
