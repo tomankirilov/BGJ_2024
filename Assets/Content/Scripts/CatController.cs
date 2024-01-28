@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CatController : MonoBehaviour
 {
-   public float walkSpeed = 5f; // Walking speed of the player
+   public float walkSpeed; // Walking speed of the player
     public float runSpeed = 10f; // Running speed of the player
     public float rotationSpeed = 100f; // Rotation speed of the player
     public float jumpForce = 10f; // Force applied when jumping
@@ -19,7 +19,7 @@ public class CatController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component attached to the player
-        Physics.gravity = new Vector3(0, -100, 0);
+        Physics.gravity = new Vector3(0, -50, 0);
         anim.GetComponentInChildren<Animator>();
          
         
@@ -27,9 +27,14 @@ public class CatController : MonoBehaviour
 
     void Update()
     {
-       Walk();
+        Walk();
        jump();
         
+
+    }
+
+    void FixedUpdate() 
+    {
 
     }
 
@@ -54,6 +59,16 @@ public class CatController : MonoBehaviour
         // Calculate movement direction
         Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical).normalized;
 
+        if (movement.magnitude > 0 && isGrounded)
+    {
+        // Trigger animation here
+        anim.SetBool("Walk", true);
+    }
+    else if(movement.magnitude == 0 && isGrounded)
+    {
+        // Set animation parameter to false if there is no movement
+        anim.SetBool("Walk", false);
+    }
         // Rotate the player based on movement direction
         if (movement != Vector3.zero)
         {
@@ -66,7 +81,6 @@ public class CatController : MonoBehaviour
 
         // Move the player
         rb.velocity = new Vector3(movement.x * speed, rb.velocity.y, movement.z * speed);
-        anim.SetBool("Walk", true);
 
         Debug.Log("Working");
     }
