@@ -62,7 +62,8 @@ public class CatController : MonoBehaviour
 
         if (isGrounded)
         {
-            // anim.Play("Idle");
+            anim.SetBool("JumpUp", false);
+            anim.SetBool("JumpDown", false);
             if (movement.magnitude > 0)
             {
                 // Trigger animation here
@@ -74,9 +75,19 @@ public class CatController : MonoBehaviour
                 anim.SetBool("Walk", false);
             }    
         }
-        else
+        else // in air
         {
-            // anim.Play("Jump_Down");
+            if(rb.velocity.y > 0)
+            {
+                anim.SetBool("JumpUp", true);
+                anim.SetBool("JumpDown", false);
+            }
+            else
+            {
+                anim.SetBool("JumpUp", false);
+                anim.SetBool("JumpDown", true);
+            }
+            
         }
 
 
