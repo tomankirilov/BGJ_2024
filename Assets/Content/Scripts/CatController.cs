@@ -14,6 +14,10 @@ public class CatController : MonoBehaviour
 
     private Rigidbody rb;
     private bool isGrounded; // Flag to track if the player is grounded
+    public AudioSource clip;
+    public AudioSource Purr;
+    public AudioSource walkingsound;
+    public AudioClip source;
 
 
     void Start()
@@ -21,6 +25,8 @@ public class CatController : MonoBehaviour
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component attached to the player
         Physics.gravity = new Vector3(0, -50, 0);
         anim.GetComponentInChildren<Animator>();
+        Purr.Play();
+        
          
         
     }
@@ -68,11 +74,14 @@ public class CatController : MonoBehaviour
             {
                 // Trigger animation here
                 anim.SetBool("Walk", true);
+                walkingsound.enabled = true;
+                
             }
             else
             {
                 // Set animation parameter to false if there is no movement
                 anim.SetBool("Walk", false);
+                walkingsound.enabled = false;
             }    
         }
         else // in air
@@ -117,6 +126,8 @@ public class CatController : MonoBehaviour
 
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false; // Player is no longer grounded after jumping
+            clip.PlayOneShot(source);
+            
         }
     }
 
