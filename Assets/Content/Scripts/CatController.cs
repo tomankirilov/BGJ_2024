@@ -10,7 +10,7 @@ public class CatController : MonoBehaviour
     public float rotationSpeed = 100f; // Rotation speed of the player
     public float jumpForce = 10f; // Force applied when jumping
 
-    private Animator anim;
+    public Animator anim;
 
     private Rigidbody rb;
     private bool isGrounded; // Flag to track if the player is grounded
@@ -20,6 +20,7 @@ public class CatController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component attached to the player
         Physics.gravity = new Vector3(0, -100, 0);
+        anim.GetComponentInChildren<Animator>();
          
         
     }
@@ -43,24 +44,9 @@ public class CatController : MonoBehaviour
         isGrounded = false;
     }
 
-    private void walk()
-    {
-        anim.SetBool("Walk", true);
-    }
-
-    private void Idle()
-    {
-        anim.SetBool("Walk", false);
-    }
-
     private void Walk()
     {
 // Get input from WASD keys and Shift key
-
-if(Input.GetKeyDown(KeyCode.W) && (KeyCode.A) && (KeyCode.D) && (Input.GetKeyDown(KeyCode.S)))
-{
-    
-}
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         bool isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
@@ -80,6 +66,9 @@ if(Input.GetKeyDown(KeyCode.W) && (KeyCode.A) && (KeyCode.D) && (Input.GetKeyDow
 
         // Move the player
         rb.velocity = new Vector3(movement.x * speed, rb.velocity.y, movement.z * speed);
+        anim.SetBool("Walk", true);
+
+        Debug.Log("Working");
     }
 
     private void jump()
