@@ -12,7 +12,7 @@ public class StartGame : MonoBehaviour
     }
 
     public void OnStartGame(){
-        Debug.Log("Start Game!");
+        
         SceneManager.LoadScene("Level_01");
     }
 }
