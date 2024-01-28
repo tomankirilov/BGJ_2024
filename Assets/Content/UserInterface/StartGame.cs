@@ -5,14 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    // [SerializeField] Animation anim;
+    [SerializeField] Animator anim;
     void Start()
     {
-        // anim.Play("Intro");
+        
     }
 
     public void OnStartGame(){
         
+        anim.Play("Outro");
+    }
+
+    public void OnOutroEnd()
+    {
         SceneManager.LoadScene("Level_01");
+        // Debug.Log("");
     }
 }
