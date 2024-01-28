@@ -92,6 +92,7 @@ public class CatController : MonoBehaviour
         // Jumping
         if (isGrounded && isJumping)
         {
+
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false; // Player is no longer grounded after jumping
         }
