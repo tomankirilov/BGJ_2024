@@ -74,14 +74,15 @@ public class CatController : MonoBehaviour
             {
                 // Trigger animation here
                 anim.SetBool("Walk", true);
-                walkingsound.enabled = true;
+                
                 
             }
             else
             {
                 // Set animation parameter to false if there is no movement
                 anim.SetBool("Walk", false);
-                walkingsound.enabled = false;
+                walkingsound.Play();
+                
             }    
         }
         else // in air
